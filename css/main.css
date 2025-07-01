@@ -33163,7 +33163,7 @@ a.icon-cart-furniture.food-cart span {
 #cert-bread {
     margin-top: 50px;
     margin-right: 916px;
-    background: rgba(0, 0, 0, 0.4);
+    /* background: rgba(0, 0, 0, 0.4); */
     padding-left: 6px;
     padding-bottom: 5px
 }
