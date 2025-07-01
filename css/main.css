@@ -37510,7 +37510,8 @@ select.goog-te-combo {
 }
 
 .fruits-choose-area {
-    background-color: #e8f8df;
+    /* background-color: #e8f8df; */
+    background-color: #0CC2E1 !important;
     position: relative
 }
 
@@ -37531,7 +37532,8 @@ select.goog-te-combo {
 }
 
 .single-fruits-services {
-    background-color: #e8f8df;
+    /* background-color: #0CC2E1; */
+    background-color: #0CC2E1 !important;
     padding: 20px;
     border-radius: 10px
 }
