@@ -35854,7 +35854,7 @@ a.bundle-btn {
 
 .product-fruit-img>img {
     border-radius: 10px 10px 0 0;
-    width: 100%
+    width: 100%;
 }
 
 .product-furit-action {
@@ -35915,7 +35915,7 @@ a.bundle-btn {
 }
 
 .product-fruit-content {
-    padding: 25px 10px 34px;
+    padding: 16px 10px 16px;
     background-color: transparent;
     transition: all .3s ease 0s
 }
@@ -37811,7 +37811,7 @@ button:active {
 }
 
 .grains {
-    background-image: url(../img/banner/grains-banner.jpg)
+    background-image: url(../img/banner/honey-banner.jpg)
 }
 
 .pulses {
@@ -37819,7 +37819,7 @@ button:active {
 }
 
 .spices {
-    background-image: url(../img/banner/indian-spices-banner.jpg)
+    background-image: url(../img/banner/jaggery-banner.jpg)
 }
 
 .fruits {
@@ -37847,7 +37847,7 @@ button:active {
 }
 
 .beverages {
-    background-image: url(../img/banner/beverages-banner.jpg)
+    background-image: url(../img/banner/cashew-banner.jpg)
 }
 
 .dehydrated-product {
@@ -38424,8 +38424,13 @@ button:active {
 
 .product-fruit-wrapper {
     height: 330px;
+    margin-bottom: 50px !important;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
-    border-radius: 13px
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
 }
 
 .listing-form-area {
