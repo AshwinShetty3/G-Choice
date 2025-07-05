@@ -37524,13 +37524,50 @@ select.goog-te-combo {
 .fruits-choose-content {
     margin-left: 60px
 }
-
-.single-fruits-services::before {
+/* Why the Indian market Plant org */
+/* .single-fruits-services::before {
     content: url(../img/icon-img/plant22.png);
     position: absolute;
     transform: scale(0.5);
     top: -10px
+} */
+
+.single-fruits-services {
+    position: relative; /* Needed for absolute positioning of ::before */
 }
+
+.single-fruits-services::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 5%;
+    transform: translateX(-50%) scale(0.8); /* Center and scale */
+    width: 60px;   /* Set your desired width */
+    height: 120px; /* Set your desired height */
+    background: url('../img/icon-img/plant22.png') no-repeat center center;
+    background-size: contain;
+    z-index: 1;
+    /* Remove content: url(...)! */
+}
+
+@media (max-width: 600px) {
+    .single-fruits-services::before {
+      top: -15px;
+      left: 8% !important;
+      transform: scale(0.8); /* keep your scale or adjust as needed */
+    }
+  }
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .single-fruits-services::before {
+      left: 8%; /* Adjust as needed for centering */
+      width: 50px;  /* Adjust width if needed */
+      height: 100px; /* Adjust height if needed */
+      transform: scale(0.8); /* Or your preferred scale */
+      display: block; /* Ensure it's visible */
+    }
+  }
+
 
 .fruits-services-wrapper {
     display: flex;
