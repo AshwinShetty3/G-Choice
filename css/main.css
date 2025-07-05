@@ -36015,7 +36015,7 @@ a.bundle-btn {
 }
 
 .fruits-choose-serial {
-    background: rgba(0, 0, 0, 0) url("../img/icon-img/50.png") no-repeat scroll center center/cover;
+    background: rgba(0, 0, 0, 0) url("../img/icon-img/502.png") no-repeat scroll center center/cover;
     position: absolute;
     height: 63px;
     width: 150px;
@@ -37516,8 +37516,8 @@ select.goog-te-combo {
 }
 
 .fruits-choose-area {
-    /* background-color: #e8f8df; */
-    background-color: #0CC2E1 !important;
+    /* background-color: #0CC2E1 !important; */
+    background-color: #EFFFFE !important;
     position: relative
 }
 
@@ -37538,8 +37538,8 @@ select.goog-te-combo {
 }
 
 .single-fruits-services {
-    /* background-color: #0CC2E1; */
-    background-color: #0CC2E1 !important;
+    /* background-color: #0CC2E1 !important; */
+    background-color: #9de6f3 !important;
     padding: 20px;
     border-radius: 10px
 }
