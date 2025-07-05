@@ -1526,367 +1526,200 @@
       </div>
     </footer>
 
-    <div
-      class="modal fade"
-      id="supplier-form"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div class="contact-title modal-title">
-              <h4>Become a Supplier With Us</h4>
+      <!-- Become Supplier -->
+  <div class="modal fade" id="supplier-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <div class="contact-title modal-title">
+        <h4>Become a Supplier With Us</h4>
+      </div>
+      <button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true" class="text-dark">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <!-- <form id="supplier-form-modal" class="supplier-form modal-form" method="POST" action="https://formspree.io/f/xovwpeee"> -->
+        <form action="https://formspree.io/f/xdkzvezy" method="POST">
+        <input type="hidden" name="_subject" value="New Supplier Enquiry" />
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact-input-style mb-10">
+              <label>Full Name <span class="text-danger">*</span></label>
+              <input id="fullname" type="text" name="fullname" autocomplete="off">
             </div>
-            <button
-              type="button"
-              class="close close-modal"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true" class="text-dark">&times;</span>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-input-style mb-10">
+              <label>Email <span class="text-danger">*</span></label>
+              <input class="email" type="email" name="email" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-input-style mb-10">
+              <label>Country Code <span class="text-danger">*</span></label>
+              <select name="countryCode" id="countryCode" class="countryCode">
+                <option data-countryCode="IN" value="91">India (+91)</option>
+                <optgroup label="Other countries">
+                  <option data-countryCode="DZ" value="213">Algeria (+213)</option>
+                  <option data-countryCode="AD" value="376">Andorra (+376)</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="contact-input-style mb-10">
+              <label>Mobile Number <span class="text-danger">*</span></label>
+              <input id="mobile" type="text" name="mobile" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="contact-input-style business-options mb-10">
+              <label>I am a <span class="text-danger">*</span></label>
+              <select name="business" id="business" class="business">
+                <option value="farmer">Farmer</option>
+                <option value="fpo-member"> FPO Member</option>
+                <option value="manufacturer">Manufacturer</option>
+                <option value="agent">
+                  Agent/Representative/Exim Company</option>
+              </select>
+            </div>
+          </div>
+          <!-- farmer -->
+          <div class="col-md-6 farmer custom-fields">
+            <div class="contact-input-style mb-10">
+              <label>Adhar Card Number <span class="text-danger">*</span></label>
+              <input class="adhar" type="adhar" name="AdharCardNumber" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-md-6 farmer custom-fields">
+            <div class="listing-textarea-style mb-10">
+              <label>Products available <span class="text-danger">*</span></label>
+              <textarea class="form-control2 listing-form-input" name="ProductsAvailable"
+                autocomplete="off"></textarea>
+            </div>
+          </div>
+          <!-- fpo-member -->
+          <div class="col-md-6 fpo-member custom-fields">
+            <div class="contact-input-style mb-10">
+              <label>Company Name <span class="text-danger">*</span></label>
+              <input class="company" type="company" name="company" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-md-6 fpo-member custom-fields">
+            <div class="listing-textarea-style mb-10">
+              <label>Products available <span class="text-danger">*</span></label>
+              <textarea class="form-control2 listing-form-input" name="ProductsAvailable"
+                autocomplete="off"></textarea>
+            </div>
+          </div>
+          <div class="col-md-6 fpo-member custom-fields">
+            <div class="contact-input-style mb-10">
+              <label>Registration Number <span class="text-danger">*</span></label>
+              <input class="register" type="register" name="RegistrationNumber" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-md-6 fpo-member custom-fields">
+            <div class="contact-input-style year mb-10">
+              <label>Year of Establishment <span class="text-danger">*</span></label>
+              <select name="Year of Establishment" id="year1" class="year1">
+                <select id="year1"></select>
+              </select>
+            </div>
+          </div>
+          <!-- manufacturer -->
+          <div class="col-md-6 manufacturer custom-fields">
+            <div class="contact-input-style mb-10">
+              <label>Company Name <span class="text-danger">*</span></label>
+              <input class="company" type="company" name="company" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-md-6 manufacturer custom-fields">
+            <div class="listing-textarea-style mb-10">
+              <label>Products available <span class="text-danger">*</span></label>
+              <textarea class="form-control2 listing-form-input" name="ProductsAvailable"
+                autocomplete="off"></textarea>
+            </div>
+          </div>
+          <div class="col-md-6 manufacturer custom-fields">
+            <div class="contact-input-style mb-10">
+              <label>Registration Number <span class="text-danger">*</span></label>
+              <input class="register" type="register" name="RegistrationNumber" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-md-6 manufacturer custom-fields">
+            <div class="contact-input-style year mb-10">
+              <label>Year of Establishment <span class="text-danger">*</span></label>
+              <select name="Year of Establishment" id="year2" class="year2">
+                <select id="year2"></select>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 manufacturer custom-fields">
+            <div class="contact-input-style mb-10">
+              <label>Membership of any Association/Council/Chamber</label>
+              <input class="Membership" type="Membership" name="Membership" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-md-6 manufacturer custom-fields">
+            <div class="contact-input-style mb-10">
+              <label> IEC Number</label>
+              <input class="IEC" type="IEC" name="IEC Number" autocomplete="off">
+            </div>
+          </div>
+          <!-- agent -->
+          <div class="col-md-6 agent custom-fields">
+            <div class="contact-input-style mb-10">
+              <label>Company Name <span class="text-danger">*</span></label>
+              <input class="company" type="company" name="company" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-md-6 agent custom-fields">
+            <div class="listing-textarea-style mb-10">
+              <label>Products available <span class="text-danger">*</span></label>
+              <textarea class="form-control2 listing-form-input" name="ProductsAvailable"
+                autocomplete="off"></textarea>
+            </div>
+          </div>
+          <div class="col-md-6 agent custom-fields">
+            <div class="contact-input-style mb-10">
+              <label>Registration Number <span class="text-danger">*</span></label>
+              <input class="register" type="register" name="RegistrationNumber" autocomplete="off">
+            </div>
+          </div>
+          <div class="col-md-6 agent custom-fields">
+            <div class="contact-input-style year mb-10">
+              <label>Year of Establishment <span class="text-danger">*</span></label>
+              <select name="Year of Establishment" id="year3" class="year3">
+                <select id="year3"></select>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 agent custom-fields">
+            <div class="contact-input-style mb-10">
+              <label>Membership of any Association/Council/Chamber</label>
+              <input class="Membership" type="Membership" name="Membership" autocomplete="off">
+            </div>
+          </div>
+          <!-- buttons -->
+          <div class="col-md-12">
+            <button id="supplier-submit" class="submit contact-btn float-right" type="submit">
+              Send Message
+            </button>
+            <button id="button" data-dismiss="modal" aria-label="Close" class="contact-btn" type="submit">
+              Cancel
             </button>
           </div>
-          <div class="modal-body">
-            <form
-              id="supplier-form-modal"
-              class="supplier-form modal-form"
-              method="POST"
-            >
-              <input type="hidden" name="_subject" value="" />
-              <input type="hidden" name="_cc" value="" />
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="contact-input-style mb-10">
-                    <label>Full Name <span class="text-danger">*</span></label>
-                    <input
-                      id="fullname"
-                      type="text"
-                      name="fullname"
-                      autocomplete="off"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="contact-input-style mb-10">
-                    <label>Email <span class="text-danger">*</span></label>
-                    <input
-                      class="email"
-                      type="email"
-                      name="email"
-                      autocomplete="off"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="contact-input-style mb-10">
-                    <label
-                      >Country Code <span class="text-danger">*</span></label
-                    >
-                    <select
-                      name="countryCode"
-                      id="countryCode"
-                      class="countryCode"
-                    >
-                      <option data-countryCode="IN" value="91">
-                        India (+91)
-                      </option>
-                      <optgroup label="Other countries">
-                        <option data-countryCode="DZ" value="213">
-                          Algeria (+213)
-                        </option>
-                        <option data-countryCode="AD" value="376">
-                          Andorra (+376)
-                        </option>
-                      </optgroup>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-8">
-                  <div class="contact-input-style mb-10">
-                    <label
-                      >Mobile Number <span class="text-danger">*</span></label
-                    >
-                    <input
-                      id="mobile"
-                      type="text"
-                      name="mobile"
-                      autocomplete="off"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="contact-input-style business-options mb-10">
-                    <label>I am a <span class="text-danger">*</span></label>
-                    <select name="business" id="business" class="business">
-                      <option value="farmer">Farmer</option>
-                      <option value="fpo-member">FPO Member</option>
-                      <option value="manufacturer">Manufacturer</option>
-                      <option value="agent">
-                        Agent/Representative/Exim Company
-                      </option>
-                    </select>
-                  </div>
-                </div>
-                <!-- farmer -->
-                <div class="col-md-6 farmer custom-fields">
-                  <div class="contact-input-style mb-10">
-                    <label
-                      >Adhar Card Number
-                      <span class="text-danger">*</span></label
-                    >
-                    <input
-                      class="adhar"
-                      type="adhar"
-                      name="AdharCardNumber"
-                      autocomplete="off"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6 farmer custom-fields">
-                  <div class="listing-textarea-style mb-10">
-                    <label
-                      >Products available
-                      <span class="text-danger">*</span></label
-                    >
-                    <textarea
-                      class="form-control2 listing-form-input"
-                      name="ProductsAvailable"
-                      autocomplete="off"
-                    ></textarea>
-                  </div>
-                </div>
-                <!-- fpo-member -->
-                <div class="col-md-6 fpo-member custom-fields">
-                  <div class="contact-input-style mb-10">
-                    <label
-                      >Company Name <span class="text-danger">*</span></label
-                    >
-                    <input
-                      class="company"
-                      type="company"
-                      name="company"
-                      autocomplete="off"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6 fpo-member custom-fields">
-                  <div class="listing-textarea-style mb-10">
-                    <label
-                      >Products available
-                      <span class="text-danger">*</span></label
-                    >
-                    <textarea
-                      class="form-control2 listing-form-input"
-                      name="ProductsAvailable"
-                      autocomplete="off"
-                    ></textarea>
-                  </div>
-                </div>
-                <div class="col-md-6 fpo-member custom-fields">
-                  <div class="contact-input-style mb-10">
-                    <label
-                      >Registration Number
-                      <span class="text-danger">*</span></label
-                    >
-                    <input
-                      class="register"
-                      type="register"
-                      name="RegistrationNumber"
-                      autocomplete="off"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6 fpo-member custom-fields">
-                  <div class="contact-input-style year mb-10">
-                    <label
-                      >Year of Establishment
-                      <span class="text-danger">*</span></label
-                    >
-                    <select
-                      name="Year of Establishment"
-                      id="year1"
-                      class="year1"
-                    >
-                      <select id="year1"></select>
-                    </select>
-                  </div>
-                </div>
-                <!-- manufacturer -->
-                <div class="col-md-6 manufacturer custom-fields">
-                  <div class="contact-input-style mb-10">
-                    <label
-                      >Company Name <span class="text-danger">*</span></label
-                    >
-                    <input
-                      class="company"
-                      type="company"
-                      name="company"
-                      autocomplete="off"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6 manufacturer custom-fields">
-                  <div class="listing-textarea-style mb-10">
-                    <label
-                      >Products available
-                      <span class="text-danger">*</span></label
-                    >
-                    <textarea
-                      class="form-control2 listing-form-input"
-                      name="ProductsAvailable"
-                      autocomplete="off"
-                    ></textarea>
-                  </div>
-                </div>
-                <div class="col-md-6 manufacturer custom-fields">
-                  <div class="contact-input-style mb-10">
-                    <label
-                      >Registration Number
-                      <span class="text-danger">*</span></label
-                    >
-                    <input
-                      class="register"
-                      type="register"
-                      name="RegistrationNumber"
-                      autocomplete="off"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6 manufacturer custom-fields">
-                  <div class="contact-input-style year mb-10">
-                    <label
-                      >Year of Establishment
-                      <span class="text-danger">*</span></label
-                    >
-                    <select
-                      name="Year of Establishment"
-                      id="year2"
-                      class="year2"
-                    >
-                      <select id="year2"></select>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-6 manufacturer custom-fields">
-                  <div class="contact-input-style mb-10">
-                    <label>Membership of any Association/Council/Chamber</label>
-                    <input
-                      class="Membership"
-                      type="Membership"
-                      name="Membership"
-                      autocomplete="off"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6 manufacturer custom-fields">
-                  <div class="contact-input-style mb-10">
-                    <label> IEC Number</label>
-                    <input
-                      class="IEC"
-                      type="IEC"
-                      name="IEC Number"
-                      autocomplete="off"
-                    />
-                  </div>
-                </div>
-                <!-- agent -->
-                <div class="col-md-6 agent custom-fields">
-                  <div class="contact-input-style mb-10">
-                    <label
-                      >Company Name <span class="text-danger">*</span></label
-                    >
-                    <input
-                      class="company"
-                      type="company"
-                      name="company"
-                      autocomplete="off"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6 agent custom-fields">
-                  <div class="listing-textarea-style mb-10">
-                    <label
-                      >Products available
-                      <span class="text-danger">*</span></label
-                    >
-                    <textarea
-                      class="form-control2 listing-form-input"
-                      name="ProductsAvailable"
-                      autocomplete="off"
-                    ></textarea>
-                  </div>
-                </div>
-                <div class="col-md-6 agent custom-fields">
-                  <div class="contact-input-style mb-10">
-                    <label
-                      >Registration Number
-                      <span class="text-danger">*</span></label
-                    >
-                    <input
-                      class="register"
-                      type="register"
-                      name="RegistrationNumber"
-                      autocomplete="off"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6 agent custom-fields">
-                  <div class="contact-input-style year mb-10">
-                    <label
-                      >Year of Establishment
-                      <span class="text-danger">*</span></label
-                    >
-                    <select
-                      name="Year of Establishment"
-                      id="year3"
-                      class="year3"
-                    >
-                      <select id="year3"></select>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-6 agent custom-fields">
-                  <div class="contact-input-style mb-10">
-                    <label>Membership of any Association/Council/Chamber</label>
-                    <input
-                      class="Membership"
-                      type="Membership"
-                      name="Membership"
-                      autocomplete="off"
-                    />
-                  </div>
-                </div>
-                <!-- buttons -->
-                <div class="col-md-12">
-                  <button
-                    id="supplier-submit"
-                    class="submit contact-btn float-right"
-                    type="submit"
-                  >
-                    Send Message
-                  </button>
-                  <button
-                    id="button"
-                    data-dismiss="modal"
-                    aria-label="Close"
-                    class="contact-btn"
-                    type="submit"
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer mr-auto">
-            <p id="supplier-toast"></p>
-          </div>
         </div>
-      </div>
+      </form>
     </div>
+    <div class="modal-footer mr-auto">
+      <p id="supplier-toast"></p>
+    </div>
+  </div>
+</div>
+</div>
 
     <script>
       var start = new Date().getFullYear();

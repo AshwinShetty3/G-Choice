@@ -1387,7 +1387,9 @@
   </div>
 </footer>
 
-<div class="modal fade" id="supplier-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Become Supplier -->
+  <div class="modal fade" id="supplier-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -1399,9 +1401,9 @@
         </button>
       </div>
       <div class="modal-body">
-        <form id="supplier-form-modal" class="supplier-form modal-form" method="POST">
-          <input type="hidden" name="_subject" value=""/>
-          <input type="hidden" name="_cc" value="" />
+        <!-- <form id="supplier-form-modal" class="supplier-form modal-form" method="POST" action="https://formspree.io/f/xovwpeee"> -->
+          <form action="https://formspree.io/f/xdkzvezy" method="POST">
+          <input type="hidden" name="_subject" value="New Supplier Enquiry" />
           <div class="row">
             <div class="col-md-6">
               <div class="contact-input-style mb-10">
@@ -1441,7 +1443,7 @@
                   <option value="fpo-member"> FPO Member</option>
                   <option value="manufacturer">Manufacturer</option>
                   <option value="agent">
-                  Agent/Representative/Exim Company</option>
+                    Agent/Representative/Exim Company</option>
                 </select>
               </div>
             </div>
@@ -1455,7 +1457,8 @@
             <div class="col-md-6 farmer custom-fields">
               <div class="listing-textarea-style mb-10">
                 <label>Products available <span class="text-danger">*</span></label>
-                <textarea class="form-control2 listing-form-input" name="ProductsAvailable" autocomplete="off"></textarea>
+                <textarea class="form-control2 listing-form-input" name="ProductsAvailable"
+                  autocomplete="off"></textarea>
               </div>
             </div>
             <!-- fpo-member -->
@@ -1468,7 +1471,8 @@
             <div class="col-md-6 fpo-member custom-fields">
               <div class="listing-textarea-style mb-10">
                 <label>Products available <span class="text-danger">*</span></label>
-                <textarea class="form-control2 listing-form-input" name="ProductsAvailable" autocomplete="off"></textarea>
+                <textarea class="form-control2 listing-form-input" name="ProductsAvailable"
+                  autocomplete="off"></textarea>
               </div>
             </div>
             <div class="col-md-6 fpo-member custom-fields">
@@ -1495,7 +1499,8 @@
             <div class="col-md-6 manufacturer custom-fields">
               <div class="listing-textarea-style mb-10">
                 <label>Products available <span class="text-danger">*</span></label>
-                <textarea class="form-control2 listing-form-input" name="ProductsAvailable" autocomplete="off"></textarea>
+                <textarea class="form-control2 listing-form-input" name="ProductsAvailable"
+                  autocomplete="off"></textarea>
               </div>
             </div>
             <div class="col-md-6 manufacturer custom-fields">
@@ -1534,10 +1539,11 @@
             <div class="col-md-6 agent custom-fields">
               <div class="listing-textarea-style mb-10">
                 <label>Products available <span class="text-danger">*</span></label>
-                <textarea class="form-control2 listing-form-input" name="ProductsAvailable" autocomplete="off"></textarea>
+                <textarea class="form-control2 listing-form-input" name="ProductsAvailable"
+                  autocomplete="off"></textarea>
               </div>
             </div>
-                        <div class="col-md-6 agent custom-fields">
+            <div class="col-md-6 agent custom-fields">
               <div class="contact-input-style mb-10">
                 <label>Registration Number <span class="text-danger">*</span></label>
                 <input class="register" type="register" name="RegistrationNumber" autocomplete="off">
