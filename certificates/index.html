@@ -227,6 +227,42 @@
       </div>
     </section>
 
+    <script>
+      function handleModalSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        fetch(form.action, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+          const toast = document.getElementById('toast');
+          toast.style.display = 'block';
+          toast.style.color = '#28a745';
+          toast.innerHTML = 'Thank you for your message! We will contact you soon.';
+          form.reset();
+          setTimeout(() => {
+            $('#contact-form-modal').modal('hide');
+            toast.style.display = 'none';
+          }, 3000);
+        })
+        .catch(error => {
+          const toast = document.getElementById('toast');
+          toast.style.display = 'block';
+          toast.style.color = '#dc3545';
+          toast.innerHTML = 'Something went wrong. Please try again later.';
+        });
+      }
+    </script>
+
     <section class="certification-area ptb-60 mrl-70">
       <div class="certificate-gallery container">
         <div class="section-title-furits text-center mb-80">
@@ -356,6 +392,42 @@
       </div>
     </section>
 
+    <script>
+      function handleModalSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        fetch(form.action, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+          const toast = document.getElementById('toast');
+          toast.style.display = 'block';
+          toast.style.color = '#28a745';
+          toast.innerHTML = 'Thank you for your message! We will contact you soon.';
+          form.reset();
+          setTimeout(() => {
+            $('#contact-form-modal').modal('hide');
+            toast.style.display = 'none';
+          }, 3000);
+        })
+        .catch(error => {
+          const toast = document.getElementById('toast');
+          toast.style.display = 'block';
+          toast.style.color = '#dc3545';
+          toast.innerHTML = 'Something went wrong. Please try again later.';
+        });
+      }
+    </script>
+
     <section class="newsletter-area bg-img ptb-105">
       <div class="container">
         <div class="newsletter-wrapper">
@@ -400,6 +472,42 @@
       </div>
     </section>
 
+    <script>
+      function handleModalSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        fetch(form.action, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+          const toast = document.getElementById('toast');
+          toast.style.display = 'block';
+          toast.style.color = '#28a745';
+          toast.innerHTML = 'Thank you for your message! We will contact you soon.';
+          form.reset();
+          setTimeout(() => {
+            $('#contact-form-modal').modal('hide');
+            toast.style.display = 'none';
+          }, 3000);
+        })
+        .catch(error => {
+          const toast = document.getElementById('toast');
+          toast.style.display = 'block';
+          toast.style.color = '#dc3545';
+          toast.innerHTML = 'Something went wrong. Please try again later.';
+        });
+      }
+    </script>
+
     <!-- Modal -->
     <div
       class="modal fade"
@@ -431,8 +539,10 @@
         > -->
             <form
               class="kwes-form"
+              id="modal-contact-form"
               method="POST"
-              action="https://kwes.io/api/foreign/forms/auNcdNbohnWnDLO83hJq"
+              action="https://formcarry.com/s/stWRJ1W0Zkd"
+              onsubmit="handleModalSubmit(event)"
             >
               <input type="hidden" name="_subject" value="" />
               <input type="hidden" name="_cc" value="" />

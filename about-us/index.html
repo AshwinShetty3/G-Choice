@@ -213,6 +213,70 @@
     </div>
   </section>
 
+  <script>
+    function handleSubscribeSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const email = form.querySelector('.EMAIL').value;
+      const messageDiv = form.querySelector('#subscribe-message');
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({ EMAIL: email })
+      })
+      .then(response => response.json())
+      .then(data => {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#28a745';
+        messageDiv.innerHTML = 'Thank you for your interest! We will contact you soon.';
+        form.reset();
+      })
+      .catch(error => {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#dc3545';
+        messageDiv.innerHTML = 'Something went wrong. Please try again later.';
+      });
+    }
+
+    function handleModalSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.style.color = '#28a745';
+        toast.innerHTML = 'Thank you for your message! We will contact you soon.';
+        form.reset();
+        setTimeout(() => {
+          $('#contact-form-modal').modal('hide');
+          toast.style.display = 'none';
+        }, 3000);
+      })
+      .catch(error => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.style.color = '#dc3545';
+        toast.innerHTML = 'Something went wrong. Please try again later.';
+      });
+    }
+  </script>
+
   <section class="about-story ptb-95 mrl-80">
     <div class="container">
       <div class="row">
@@ -245,6 +309,70 @@
     </div>
   </section>
 
+  <script>
+    function handleSubscribeSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const email = form.querySelector('.EMAIL').value;
+      const messageDiv = form.querySelector('#subscribe-message');
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({ EMAIL: email })
+      })
+      .then(response => response.json())
+      .then(data => {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#28a745';
+        messageDiv.innerHTML = 'Thank you for your interest! We will contact you soon.';
+        form.reset();
+      })
+      .catch(error => {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#dc3545';
+        messageDiv.innerHTML = 'Something went wrong. Please try again later.';
+      });
+    }
+
+    function handleModalSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.style.color = '#28a745';
+        toast.innerHTML = 'Thank you for your message! We will contact you soon.';
+        form.reset();
+        setTimeout(() => {
+          $('#contact-form-modal').modal('hide');
+          toast.style.display = 'none';
+        }, 3000);
+      })
+      .catch(error => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.style.color = '#dc3545';
+        toast.innerHTML = 'Something went wrong. Please try again later.';
+      });
+    }
+  </script>
+
   <section class="goal-area mrl-60">
     <div class="container">
       <div class="row">
@@ -274,6 +402,70 @@
         </div>
       </div>
   </section>
+
+  <script>
+    function handleSubscribeSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const email = form.querySelector('.EMAIL').value;
+      const messageDiv = form.querySelector('#subscribe-message');
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({ EMAIL: email })
+      })
+      .then(response => response.json())
+      .then(data => {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#28a745';
+        messageDiv.innerHTML = 'Thank you for your interest! We will contact you soon.';
+        form.reset();
+      })
+      .catch(error => {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#dc3545';
+        messageDiv.innerHTML = 'Something went wrong. Please try again later.';
+      });
+    }
+
+    function handleModalSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.style.color = '#28a745';
+        toast.innerHTML = 'Thank you for your message! We will contact you soon.';
+        form.reset();
+        setTimeout(() => {
+          $('#contact-form-modal').modal('hide');
+          toast.style.display = 'none';
+        }, 3000);
+      })
+      .catch(error => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.style.color = '#dc3545';
+        toast.innerHTML = 'Something went wrong. Please try again later.';
+      });
+    }
+  </script>
 
   <section class="values-area mt-50 pt-50 prl-70">
     <div class="container">
@@ -336,6 +528,70 @@
     </div>
   </section>
 
+  <script>
+    function handleSubscribeSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const email = form.querySelector('.EMAIL').value;
+      const messageDiv = form.querySelector('#subscribe-message');
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({ EMAIL: email })
+      })
+      .then(response => response.json())
+      .then(data => {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#28a745';
+        messageDiv.innerHTML = 'Thank you for your interest! We will contact you soon.';
+        form.reset();
+      })
+      .catch(error => {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#dc3545';
+        messageDiv.innerHTML = 'Something went wrong. Please try again later.';
+      });
+    }
+
+    function handleModalSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.style.color = '#28a745';
+        toast.innerHTML = 'Thank you for your message! We will contact you soon.';
+        form.reset();
+        setTimeout(() => {
+          $('#contact-form-modal').modal('hide');
+          toast.style.display = 'none';
+        }, 3000);
+      })
+      .catch(error => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.style.color = '#dc3545';
+        toast.innerHTML = 'Something went wrong. Please try again later.';
+      });
+    }
+  </script>
+
   <section class="who-are-we-area mt-90 prl-50 container">
     <div class="section-title-furits text-center mb-50">
       <img class="lazyload" data-src="/img/icon-img/49.png" alt="Leaf-heading">
@@ -347,7 +603,71 @@
         key to our country's growth. Prioritizing in exporting Indian spices and other food products, we are also
         analysts and researchers who possess an up to date global food market database to help you.</p>
     </div>
-  </section> <br>
+  </section>
+
+  <script>
+    function handleSubscribeSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const email = form.querySelector('.EMAIL').value;
+      const messageDiv = form.querySelector('#subscribe-message');
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({ EMAIL: email })
+      })
+      .then(response => response.json())
+      .then(data => {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#28a745';
+        messageDiv.innerHTML = 'Thank you for your interest! We will contact you soon.';
+        form.reset();
+      })
+      .catch(error => {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#dc3545';
+        messageDiv.innerHTML = 'Something went wrong. Please try again later.';
+      });
+    }
+
+    function handleModalSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.style.color = '#28a745';
+        toast.innerHTML = 'Thank you for your message! We will contact you soon.';
+        form.reset();
+        setTimeout(() => {
+          $('#contact-form-modal').modal('hide');
+          toast.style.display = 'none';
+        }, 3000);
+      })
+      .catch(error => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.style.color = '#dc3545';
+        toast.innerHTML = 'Something went wrong. Please try again later.';
+      });
+    }
+  </script> <br>
 
   <section class="what-we-do-area p95 container">
     <div class="section-title-furits text-center mb-50">
@@ -361,7 +681,71 @@
         absolutely no difficulties. Be it Europe, middle-east, the Americas, or wherever you want the food to be
         exported, we make sure that the job is done.</p>
     </div>
-  </section> <br>
+  </section>
+
+  <script>
+    function handleSubscribeSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const email = form.querySelector('.EMAIL').value;
+      const messageDiv = form.querySelector('#subscribe-message');
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({ EMAIL: email })
+      })
+      .then(response => response.json())
+      .then(data => {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#28a745';
+        messageDiv.innerHTML = 'Thank you for your interest! We will contact you soon.';
+        form.reset();
+      })
+      .catch(error => {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#dc3545';
+        messageDiv.innerHTML = 'Something went wrong. Please try again later.';
+      });
+    }
+
+    function handleModalSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.style.color = '#28a745';
+        toast.innerHTML = 'Thank you for your message! We will contact you soon.';
+        form.reset();
+        setTimeout(() => {
+          $('#contact-form-modal').modal('hide');
+          toast.style.display = 'none';
+        }, 3000);
+      })
+      .catch(error => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.style.color = '#dc3545';
+        toast.innerHTML = 'Something went wrong. Please try again later.';
+      });
+    }
+  </script> <br>
 
   <section class="what-we-do-area p95 container">
     <div class="section-title-furits text-center mb-50">
@@ -380,6 +764,70 @@
       </div>
     </div>
   </section>
+
+  <script>
+    function handleSubscribeSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const email = form.querySelector('.EMAIL').value;
+      const messageDiv = form.querySelector('#subscribe-message');
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({ EMAIL: email })
+      })
+      .then(response => response.json())
+      .then(data => {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#28a745';
+        messageDiv.innerHTML = 'Thank you for your interest! We will contact you soon.';
+        form.reset();
+      })
+      .catch(error => {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#dc3545';
+        messageDiv.innerHTML = 'Something went wrong. Please try again later.';
+      });
+    }
+
+    function handleModalSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.style.color = '#28a745';
+        toast.innerHTML = 'Thank you for your message! We will contact you soon.';
+        form.reset();
+        setTimeout(() => {
+          $('#contact-form-modal').modal('hide');
+          toast.style.display = 'none';
+        }, 3000);
+      })
+      .catch(error => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.style.color = '#dc3545';
+        toast.innerHTML = 'Something went wrong. Please try again later.';
+      });
+    }
+  </script>
 
   <!-- <section class="director-area mt-90">
   <div class="section-title-furits text-center mb-30">
@@ -427,14 +875,15 @@
           <div class="col-lg-8 col-md-8 col-12">
             <div id="mc_embed_signup" class="subscribe-form-furits f-right">
               <form class="kwes-form" id="subscribe-form" method="POST"
-                action="https://kwes.io/api/foreign/forms/auNcdNbohnWnDLO83hJq">
+                action="https://formcarry.com/s/stWRJ1W0Zkd" onsubmit="handleSubscribeSubmit(event)">
                 <div class="mc-form">
-                  <input type="email" name="EMAIL" class="EMAIL" placeholder="Enter Email Address" autocomplete="off">
+                  <input type="email" name="EMAIL" class="EMAIL" placeholder="Enter Email Address" autocomplete="off" required>
                   <div class="clear">
                     <input type="submit" value="Enquire Now" name="subscribe" id="mc-embedded-subscribe"
                       class="button enquire-now">
                   </div>
                 </div>
+                <div id="subscribe-message" class="mt-3" style="display: none;"></div>
               </form>
             </div>
           </div>
@@ -442,6 +891,70 @@
       </div>
     </div>
   </section>
+
+  <script>
+    function handleSubscribeSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const email = form.querySelector('.EMAIL').value;
+      const messageDiv = form.querySelector('#subscribe-message');
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({ EMAIL: email })
+      })
+      .then(response => response.json())
+      .then(data => {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#28a745';
+        messageDiv.innerHTML = 'Thank you for your interest! We will contact you soon.';
+        form.reset();
+      })
+      .catch(error => {
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#dc3545';
+        messageDiv.innerHTML = 'Something went wrong. Please try again later.';
+      });
+    }
+
+    function handleModalSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.style.color = '#28a745';
+        toast.innerHTML = 'Thank you for your message! We will contact you soon.';
+        form.reset();
+        setTimeout(() => {
+          $('#contact-form-modal').modal('hide');
+          toast.style.display = 'none';
+        }, 3000);
+      })
+      .catch(error => {
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        toast.style.color = '#dc3545';
+        toast.innerHTML = 'Something went wrong. Please try again later.';
+      });
+    }
+  </script>
 
   <!-- Modal -->
   <div class="modal fade" id="contact-form-modal" tabindex="-1" role="dialog" aria-labelledby="contact-form-modal-title"
@@ -461,7 +974,7 @@
           class="contact-form modal-form"
           method="POST"
         > -->
-          <form class="kwes-form" method="POST" action="https://kwes.io/api/foreign/forms/auNcdNbohnWnDLO83hJq">
+          <form class="kwes-form" id="modal-contact-form" method="POST" action="https://formcarry.com/s/stWRJ1W0Zkd" onsubmit="handleModalSubmit(event)">
             <input type="hidden" name="_subject" value="" />
             <input type="hidden" name="_cc" value="" />
             <div class="row">
