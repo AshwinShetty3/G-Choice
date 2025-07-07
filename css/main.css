@@ -2073,6 +2073,41 @@ pre code {
     }
 }
 
+
+/* Google Translotor */
+@media (max-width: 767px) {
+    #google_translate_element,
+    .g-translate-custom {
+      position: fixed !important;
+      top: 12px;
+      right: 60px; /* Move it more to the left (increase this value as needed) */
+      z-index: 9999;
+      border-radius: 24px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      width: auto;
+      max-width: 90vw;
+    }
+    #google_translate_element select,
+    #google_translate_element .goog-te-combo {
+      min-width: 140px !important;  /* Make it a bit wider */
+      width: 140px !important;
+      margin-right: 40px;
+      font-size: 12px !important;
+      font-weight: 600 !important;
+      padding: 6px 10px !important;
+      height: 35px !important;
+      line-height: 1.1 !important;
+    }
+    #google_translate_element:before,
+    .g-translate-globe {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+/* bf6730d (Updated Google Translator design) */
 @media (max-width: 991px) {
     .table-responsive-lg {
         display: block;
@@ -37378,11 +37413,76 @@ html {
     }
 }
 
-#google_translate_element {
+/* Google Translator */
+/* #google_translate_element {
     position: absolute;
     right: 10px;
     z-index: 100
+} */
+
+/* header {
+    position: relative;
+} */
+
+/* Hide the 'Powered by' text from Google Translate widget */
+.goog-logo-link,
+.goog-te-gadget span,
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget .goog-te-combo + div,
+.goog-te-gadget .goog-te-banner-frame,
+.goog-te-gadget .goog-te-banner {
+    display: none !important;
 }
+
+.goog-te-gadget {
+    color: transparent !important;
+}
+
+/* --- Custom Google Translate Widget Styling --- */
+#google_translate_element {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+  }
+  
+  #google_translate_element:before {
+    content: '';
+    display: inline-block;
+    background: url('/img/icon-img/globe.png') no-repeat center center;
+    background-size: 20px 20px;
+    margin-bottom: 15px;
+    width: 20px;
+    height: 20px;
+    align-self: center;
+  }
+  
+  #google_translate_element select {
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+    min-width: 170px;
+    width: 170px;
+    height: 36px;
+    vertical-align: middle;
+  }
+  
+  /* Hide Google branding and badge */
+  .goog-te-gadget-icon, .goog-logo-link, .goog-te-gadget span {
+    display: none !important;
+  }
+
+  /* --- End Google Translate Widget Styling --- */
+
+
+/* >>>>>>> bf6730d (Updated Google Translator design) */
 
 .goog-te-gadget {
     color: transparent !important
